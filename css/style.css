@@ -1,0 +1,481 @@
+body{
+  font-family: 'Noto Sans JP', sans-serif; 
+}
+
+*{
+  margin:0px;
+  padding:0px;
+  list-style:none;
+  text-decoration:none;
+  box-sizing: border-box;
+}
+
+/*header*/
+header{
+	background:#7ad7ff;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:1000;
+}
+
+nav{
+	height:51px;
+}
+
+a{
+	color:#000000;
+}
+
+/*Brand name*/
+div#navbar-heading{
+	display:inline-flex;
+	margin-right:4em;
+	margin-left:1em;
+	line-height:51px;
+}
+
+div#navbar-heading a{
+	font-weight:bold;
+	font-size:1.4em; 
+	color:#000000;
+}
+
+/*Navigation links*/
+div#navlist{
+	display:inline-block;
+	float:right;
+	margin-right:1em;
+	margin-left:1em;
+}
+
+ul.list{
+	position:relative;
+}
+
+ul.list li{
+	display:inline-block;
+	line-height:51px;
+	color:#000000;
+}
+
+ul.list>li i{
+	margin-right:0.5em; 
+}
+
+ul.list>li a{
+	font-size:1.05em;
+	display:block;
+	padding-right:1.5em; 
+	padding-left:1.5em;
+}
+
+/*Hover effects*/
+ul>li:hover{
+	background:#2bbfff;
+}
+
+ul>li:hover ul{
+	display:block;
+}
+
+ul>li ul li:hover{
+	background:#2bbfff;
+}
+
+/*Sub menu*/
+ul.sub-menu{
+	position:absolute;
+	min-width:200px;
+	display:none;
+	z-index:100; 
+}
+
+ul.sub-menu li{
+	display:block;
+	background:#7ad7ff;
+	color:#ffffff;
+}
+
+/*menu-icon*/
+button.menu-icon{
+	display:none;
+	float:right;
+	border:none;
+	width:2em;
+	font-size:25px;
+	outline:none;
+	background:#7ad7ff;
+	color:#000000;
+	line-height:3.2rem;
+	cursor:pointer;
+}
+
+li#minwidth{
+	min-width:161.8px;
+	line-height:51px;
+}
+
+.jumbotron{
+	position:absolute;
+	top:51px;
+	width:100%;
+	padding:15px;
+}
+
+div.layout{
+	display:inline-block;
+	position:relative;
+	top:10px;
+	margin:0px auto 15px;
+	z-index:1;
+}
+
+div.layout_fibre{
+	display:inline-block;
+	position:relative;
+	top:10px;
+	margin:0px auto 15px;
+	z-index:1;
+}
+
+div.heading{
+	padding:10px;
+}
+
+div.heading p{
+	font-size:25px;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:underline #000000;
+}
+
+table{
+	width:80%;
+	margin:0px auto;
+	border-collapse:collapse;
+}
+
+table td{
+	border:1px solid #000000;
+	text-align:left;
+	padding-left:10px;
+}
+
+table th{
+	border:1px solid #000000;
+	background:#ffc14f;
+	text-align:center;
+}
+
+div.links{
+	width:100%;
+}
+
+div.links a{
+	display:inline-block;
+	width:25%;
+	color:#000000;
+}
+
+.item-tile{
+	border:1px solid #000000;
+	overflow:hidden;
+	height:202px;
+	width:295px;
+	margin:0 auto 25px;
+}
+
+.search-bar{
+	display:inline-block;
+	position:relative;
+	width:96%;
+	max-width:350px;
+	height:36px;
+	border-radius:6px;
+	overflow:hidden;
+	background:#ffffff;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+input{
+	position:absolute;
+	width:250px;
+	height:30px;
+	left:20px;
+	margin:4px 0;
+	border:0;
+	border-radius: 0;
+	outline:0;
+	font-size:16px;
+}
+
+.item-tile-book{
+	border:1px solid #000000;
+	overflow:hidden;
+	height:267.688px;
+	width:200px;
+	margin:0 auto 25px;
+}
+
+.item-tile:hover, .item-tile-book:hover{
+	box-shadow:0 1px 7px 1px #403c3b;
+}
+
+.phyto-tile{
+	position:relative;
+	display:block;
+	width:202px;
+	height:208px;
+	border:1px solid #000000;
+	overflow:hidden;
+	margin:0px auto 25px;
+}
+
+.phyto-tile span{
+	position:absolute;
+	top:0px;
+	background:#FFD700;
+	right:0px;
+	width:100%;
+	height:25px;
+	text-align:center;
+}
+
+.phyto-tile img{
+	position:absolute;
+	top:25px;
+}
+
+/*media queries*/
+@media screen and (max-width:768px){
+	button.menu-icon{
+		display:block;
+	}
+
+	ul.list{
+		display:none;
+		background:#2e2d2c;
+		position:static;
+	}
+
+	div#navlist{
+		display:block;
+		width:100%;
+		margin:0em;
+	}
+
+	ul.sub-menu{
+		display:none;
+		background:#2e2d2c;
+		position:static;
+		z-index:100;
+	}
+
+	ul.list li,ul.sub-menu li{
+		display:block;
+	}
+	ul.sub-menu li{
+		display:block;
+		background:#474a4a;
+	}
+
+	ul.sub-menu li a{
+		padding-left:2.5em;
+	}
+
+	a{
+		color:#ffffff;
+	}
+
+	ul>li:hover{
+		background:#2e2d2c;
+	}
+
+	ul>li ul li:hover{
+		background:#474a4a;
+	}
+
+	.down{
+	position:absolute;
+	right:10px;
+	line-height:3.2em;
+	padding-left:0.5em;
+	margin-left:0.5em;
+	margin-right:0em; 
+	}
+
+	.col-sm-12{
+		width:100%;
+	}
+}
+
+
+@media screen and (min-width:768px) and (max-width:991px){
+	.down{
+	float:right;
+	line-height:3em;
+	padding-left:0.5em;
+	margin-left:0.5em;
+	margin-right:0em; 
+	}
+
+	div#navbar-heading{
+	display:block;
+	text-align:center;
+	margin:auto;
+	line-height:3em;
+	border-bottom:1px solid #000000;
+	}
+
+	header{
+	height:6.35em;
+	}
+
+	div#navlist{
+	line-height:3em;
+	display:block;
+	float:none;
+	}
+
+	ul.list>li{
+		display:inline-block;
+		width:19%;
+		text-align:center;
+	}
+
+	ul.list>li a{
+	font-size:1.05em;
+	display:block;
+	padding-right:0.5em; 
+	padding-left:0.5em;
+	}
+
+	ul.sub-menu>li{
+		text-align:left;
+		padding-left:0.5em;
+	}
+
+	li#minwidth{
+		min-width:161.8px;
+	}
+
+	li.active{
+	background:#2bbfff;
+	}
+
+	.jumbotron{
+		position:absolute;
+		top:102px;
+		width:100%;
+		padding:15px;
+	}
+
+	.col-md-4{
+		float:left;
+		width:33.33333%;
+	}
+
+	.col-md-6{
+		float:left;
+		width:50%;
+	}
+}
+
+@media screen and (min-width:992px) and (max-width:1094px){
+	.down{
+	float:right;
+	line-height:3.2em;
+	padding-left:0.5em;
+	margin-left:0.5em;
+	margin-right:0em; 
+	}	
+	div#navbar-heading{
+	margin-right:3em;
+	}
+
+	div#navlist{
+	margin-right:0em;
+	margin-left:0em;
+	}
+
+	ul.list>li a{
+	font-size:1.05em;
+	display:block;
+	padding-right:1.1em; 
+	padding-left:1.1em;
+	}
+
+	li.active{
+	background:#2bbfff;
+	}
+
+	ul.list li{
+		height:51px;
+	}
+
+	.col-lg-3{
+		float:left;
+		width:25%;
+	}
+
+	.col-lg-4{
+		float:left;
+		width:33.3333333%;
+	}
+
+	.col-lg-6{
+		float:left;
+		width:50%;
+	}
+}
+
+@media screen and (min-width:1095px){
+	.down{
+	float:right;
+	line-height:3.2em;
+	padding-left:0.5em;
+	margin-left:0.5em;
+	margin-right:0em; 
+	}	
+
+	li.active{
+	background:#2bbfff;
+	}
+
+	ul.list li{
+		height:51px;
+	}
+
+	.col-5{
+	float:left;
+	width:20%;
+	}
+
+	.col-lg-4{
+		float:left;
+		width:33.333333%;
+	}
+
+	.col-lg-6{
+		float:left;
+		width:50%;
+	}
+}
+
+@media screen and (min-width:1254px){
+	.col-xl-3{
+		float:left;
+		width:25%;
+	}
+
+	.col-xl-4{
+		float:left;
+		width:33.333333%;
+	}
+
+	.col-xl-6{
+		float:left;
+		width:50%;
+	}
+}
